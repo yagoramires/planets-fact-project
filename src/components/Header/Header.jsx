@@ -1,86 +1,134 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ModalIcon from '../../assets/icon-hamburger.svg';
 import Chevron from '../../assets/icon-chevron.svg';
 import './Header.css';
 
 const Header = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleModal = () => {
+    modalOpen ? setModalOpen(false) : setModalOpen(true);
+  };
+
   return (
     <div className='header'>
       <span className='header__logo'>the planets</span>
-      <div className='header__modal'>
-        <img src={ModalIcon} alt='' className='header__modal--icon' />
-        <nav className='header__modal-header__nav hidden'>
-          <ul className='header__modal-header__ul'>
-            <li className='header__modal-header__li'>
-              <span className='header__modal__text'>
-                <div className='header__modal__icon header__modal__icon--mercury'></div>
-                Mercury
+      <div className='modal'>
+        <img
+          src={ModalIcon}
+          alt=''
+          className='modal__icon'
+          onClick={handleModal}
+        />
+        <nav className={`modal__nav ${modalOpen ? '' : 'hidden'}`}>
+          <ul className='modal__ul'>
+            <li className='modal__li'>
+              <span className='modal__text'>
+                <div className='modal__circle modal__circle--mercury'></div>
+                <Link to='/mercury'>Mercury</Link>
               </span>
-              <img src={Chevron} alt='' className='header__modal--chevron' />
+              <img src={Chevron} alt='' className='modal__arrow' />
             </li>
-            <li className='header__modal-header__li'>
-              <span className='header__modal__text'>
-                <div className='header__modal__icon header__modal__icon--venus'></div>
-                Venus
+            <li className='modal__li'>
+              <span className='modal__text'>
+                <div className='modal__circle modal__circle--venus'></div>
+                <Link to='/venus'>Venus</Link>
               </span>
-              <img src={Chevron} alt='' className='header__modal--chevron' />
+              <img src={Chevron} alt='' className='modal__arrow' />
             </li>
-            <li className='header__modal-header__li'>
-              <span className='header__modal__text'>
-                <div className='header__modal__icon header__modal__icon--earth'></div>
-                Earth
+            <li className='modal__li'>
+              <span className='modal__text'>
+                <div className='modal__circle modal__circle--earth'></div>
+                <Link to='/earth'>Earth</Link>
               </span>
-              <img src={Chevron} alt='' className='header__modal--chevron' />
+              <img src={Chevron} alt='' className='modal__arrow' />
             </li>
-            <li className='header__modal-header__li'>
-              <span className='header__modal__text'>
-                <div className='header__modal__icon header__modal__icon--mars'></div>
-                Mars
+            <li className='modal__li'>
+              <span className='modal__text'>
+                <div className='modal__circle modal__circle--mars'></div>
+                <Link to='/mars'>Mars</Link>
               </span>
-              <img src={Chevron} alt='' className='header__modal--chevron' />
+              <img src={Chevron} alt='' className='modal__arrow' />
             </li>
-            <li className='header__modal-header__li'>
-              <span className='header__modal__text'>
-                <div className='header__modal__icon header__modal__icon--jupiter'></div>
-                Jupiter
+            <li className='modal__li'>
+              <span className='modal__text'>
+                <div className='modal__circle modal__circle--jupiter'></div>
+                <Link to='/Jupiter'>Jupiter</Link>
               </span>
-              <img src={Chevron} alt='' className='header__modal--chevron' />
+              <img src={Chevron} alt='' className='modal__arrow' />
             </li>
-            <li className='header__modal-header__li'>
-              <span className='header__modal__text'>
-                <div className='header__modal__icon header__modal__icon--saturn'></div>
-                Saturn
+            <li className='modal__li'>
+              <span className='modal__text'>
+                <div className='modal__circle modal__circle--saturn'></div>
+                <Link to='/saturn'>Saturn</Link>
               </span>
-              <img src={Chevron} alt='' className='header__modal--chevron' />
+              <img src={Chevron} alt='' className='modal__arrow' />
             </li>
-            <li className='header__modal-header__li'>
-              <span className='header__modal__text'>
-                <div className='header__modal__icon header__modal__icon--uranus'></div>
-                Uranus
+            <li className='modal__li'>
+              <span className='modal__text'>
+                <div className='modal__circle modal__circle--uranus'></div>
+                <Link to='/uranus'>Uranus</Link>
               </span>
-              <img src={Chevron} alt='' className='header__modal--chevron' />
+              <img src={Chevron} alt='' className='modal__arrow' />
             </li>
-            <li className='header__modal-header__li'>
-              <span className='header__modal__text'>
-                <div className='header__modal__icon header__modal__icon--neptune'></div>
-                Neptune
+            <li className='modal__li'>
+              <span className='modal__text'>
+                <div className='modal__circle modal__circle--neptune'></div>
+                <Link to='/neptune'>Neptune</Link>
               </span>
-              <img src={Chevron} alt='' className='header__modal--chevron' />
+              <img src={Chevron} alt='' className='modal__arrow' />
             </li>
           </ul>
         </nav>
       </div>
-      <div className='header__menu'>
-        <nav className='header__menu-header__nav'>
-          <ul className='header__menu-header__ul'>
-            <li className='header__menu-header__li mercury'><button>Mercury</button></li>
-            <li className='header__menu-header__li venus'><button>Venus</button></li>
-            <li className='header__menu-header__li earth'><button>Earth</button></li>
-            <li className='header__menu-header__li mars'><button>Mars</button></li>
-            <li className='header__menu-header__li jupiter'><button>Jupiter</button></li>
-            <li className='header__menu-header__li saturn'><button>Saturn</button></li>
-            <li className='header__menu-header__li uranus'><button>Uranus</button></li>
-            <li className='header__menu-header__li neptune'><button>Neptune</button></li>
+      <div className='menu'>
+        <nav className='menu__nav'>
+          <ul className='menu__ul'>
+            <li className='menu__li menu__li--mercury'>
+              <button>
+                <Link to='/mercury' className='link'>
+                  Mercury
+                </Link>
+              </button>
+            </li>
+            <li className='menu__li menu__li--venus'>
+              <button>
+                <Link to='/venus'>Venus</Link>
+              </button>
+            </li>
+            <li className='menu__li menu__li--earth'>
+              <button>
+                <Link to='/earth'>Earth</Link>
+              </button>
+            </li>
+            <li className='menu__li menu__li--mars'>
+              <button>
+                <Link to='/mars'>Mars</Link>
+              </button>
+            </li>
+            <li className='menu__li menu__li--jupiter'>
+              <button>
+                <Link to='/jupiter'>Jupiter</Link>
+              </button>
+            </li>
+            <li className='menu__li menu__li--saturn'>
+              <button>
+                <Link to='/saturn'>Saturn</Link>
+              </button>
+            </li>
+            <li className='menu__li menu__li--uranus'>
+              <button>
+                <Link to='/uranus'>Uranus</Link>
+              </button>
+            </li>
+            <li className='menu__li menu__li--neptune'>
+              <button>
+                <Link className='menu__li menu__li--neptune' to='/neptune'>
+                  Neptune
+                </Link>
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
