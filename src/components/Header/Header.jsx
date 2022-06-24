@@ -11,9 +11,19 @@ const Header = () => {
     modalOpen ? setModalOpen(false) : setModalOpen(true);
   };
 
+  // const [mercury, setMercury] = useState(true);
+
+  // const handleClickOverview = () => {
+  //   setOverview(true);
+  //   setStructure(false);
+  //   setSurface(false);
+  // };
+
   return (
     <div className='header'>
-      <span className='header__logo'>the planets</span>
+      <Link to='/' className='header__logo'>
+        the planets
+      </Link>
       <div className='modal'>
         <img
           src={ModalIcon}
@@ -22,60 +32,76 @@ const Header = () => {
           onClick={handleModal}
         />
         <nav className={`modal__nav ${modalOpen ? '' : 'hidden'}`}>
-          <ul className='modal__ul'>
+          <ul className='modal__ul' onClick={handleModal}>
             <li className='modal__li'>
               <span className='modal__text'>
                 <div className='modal__circle modal__circle--mercury'></div>
-                <Link to='/mercury'>Mercury</Link>
+                <Link to='/mercury' onClick={handleModal}>
+                  Mercury
+                </Link>
               </span>
               <img src={Chevron} alt='' className='modal__arrow' />
             </li>
             <li className='modal__li'>
               <span className='modal__text'>
                 <div className='modal__circle modal__circle--venus'></div>
-                <Link to='/venus'>Venus</Link>
+                <Link to='/venus' onClick={handleModal}>
+                  Venus
+                </Link>
               </span>
               <img src={Chevron} alt='' className='modal__arrow' />
             </li>
             <li className='modal__li'>
               <span className='modal__text'>
                 <div className='modal__circle modal__circle--earth'></div>
-                <Link to='/earth'>Earth</Link>
+                <Link to='/earth' onClick={handleModal}>
+                  Earth
+                </Link>
               </span>
               <img src={Chevron} alt='' className='modal__arrow' />
             </li>
             <li className='modal__li'>
               <span className='modal__text'>
                 <div className='modal__circle modal__circle--mars'></div>
-                <Link to='/mars'>Mars</Link>
+                <Link to='/mars' onClick={handleModal}>
+                  Mars
+                </Link>
               </span>
               <img src={Chevron} alt='' className='modal__arrow' />
             </li>
             <li className='modal__li'>
               <span className='modal__text'>
                 <div className='modal__circle modal__circle--jupiter'></div>
-                <Link to='/Jupiter'>Jupiter</Link>
+                <Link to='/Jupiter' onClick={handleModal}>
+                  Jupiter
+                </Link>
               </span>
               <img src={Chevron} alt='' className='modal__arrow' />
             </li>
             <li className='modal__li'>
               <span className='modal__text'>
                 <div className='modal__circle modal__circle--saturn'></div>
-                <Link to='/saturn'>Saturn</Link>
+                <Link to='/saturn' onClick={handleModal}>
+                  Saturn
+                </Link>
               </span>
               <img src={Chevron} alt='' className='modal__arrow' />
             </li>
             <li className='modal__li'>
               <span className='modal__text'>
                 <div className='modal__circle modal__circle--uranus'></div>
-                <Link to='/uranus'>Uranus</Link>
+                <Link to='/uranus' onClick={handleModal}>
+                  Uranus
+                </Link>
               </span>
               <img src={Chevron} alt='' className='modal__arrow' />
             </li>
             <li className='modal__li'>
               <span className='modal__text'>
                 <div className='modal__circle modal__circle--neptune'></div>
-                <Link to='/neptune'>Neptune</Link>
+                <Link to='/neptune' onClick={handleModal}>
+                  Neptune
+                </Link>
               </span>
               <img src={Chevron} alt='' className='modal__arrow' />
             </li>
@@ -109,9 +135,7 @@ const Header = () => {
               <Link to='/uranus'>Uranus</Link>
             </li>
             <li className='menu__li menu__li--neptune'>
-              <Link className='menu__li menu__li--neptune' to='/neptune'>
-                Neptune
-              </Link>
+              <Link to='/neptune'>Neptune</Link>
             </li>
           </ul>
         </nav>

@@ -31,7 +31,7 @@ a:-webkit-any-link {
 .modal__ul {
   background-color: var(--darkBlue);
   width: 100%;
-  min-height: 100%;
+  min-height: 120vh;
   left: 0;
   top: 5rem;
   position: absolute;
@@ -107,7 +107,7 @@ a:-webkit-any-link {
   display: none;
 }
 
-@media (min-width:600px) {
+@media (min-width:720px) {
   .modal {
     display: none;
   }
@@ -153,50 +153,91 @@ a:-webkit-any-link {
 
 }
 
-@media (min-width:1200px) {
+@media (min-width:1440px) {
   .header {
     flex-direction: row;
+    padding: 0 2rem;
+    overflow: hidden;
   }
 
   .menu {
-    padding: 1.3rem 2rem;
     width: 50%;
     min-width: 600px;
   }
 
-  .mercury:hover {
+  .menu__li {
+    padding: 2rem 2px;
+  }
+
+  .menu__li--mercury:hover {
+    border-top: 4px solid #DEF4FC;
+    transition: border 300ms;
+  }
+
+  .menu__li--venus:hover {
+    border-top: 4px solid #F7CC7F;
+    transition: border 300ms;
+  }
+
+  .menu__li--earth:hover {
+    border-top: 4px solid #545BFE;
+    transition: border 300ms;
+  }
+
+  .menu__li--mars:hover {
+    border-top: 4px solid #FF6A45;
+    transition: border 300ms;
+  }
+
+  .menu__li--jupiter:hover {
+    border-top: 4px solid #ECAD7A;
+    transition: border 300ms;
+  }
+
+  .menu__li--saturn:hover {
+    border-top: 4px solid #FCCB6B;
+    transition: border 300ms;
+  }
+
+  .menu__li--uranus:hover {
+    border-top: 4px solid #65F0D5;
+    transition: border 300ms;
+  }
+
+  .menu__li--neptune:hover {
+    border-top: 4px solid #497EFA;
+    transition: border 300ms;
+  }
+
+  .mercury-active {
     border-top: 4px solid #DEF4FC;
   }
 
-  .venus:hover {
+  .venus-active {
     border-top: 4px solid #F7CC7F;
   }
 
-  .earth:hover {
+  .earth-active {
     border-top: 4px solid #545BFE;
   }
 
-  .mars:hover {
+  .mars-active {
     border-top: 4px solid #FF6A45;
   }
 
-  .jupiter:hover {
+  .jupiter-active {
     border-top: 4px solid #ECAD7A;
   }
 
-  .saturn:hover {
+  .saturn-active {
     border-top: 4px solid #FCCB6B;
   }
 
-  .uranus:hover {
+  .uranus-active {
     border-top: 4px solid #65F0D5;
   }
 
-  .neptune:hover {
+  .neptune-active {
     border-top: 4px solid #497EFA;
-  }
-
-  .mercury:active:hover {
-    border-top: 4px solid #DEF4FC;
   }
 }

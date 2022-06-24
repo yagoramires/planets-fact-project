@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Neptune from '../../assets/planet-neptune.svg';
 import Uranus from '../../assets/planet-uranus.svg';
 import Saturn from '../../assets/planet-saturn.svg';
@@ -14,29 +15,45 @@ const Planetary = () => {
   return (
     <div className='planetary'>
       <div className='planetary__neptune'>
-        <img src={Neptune} alt='' />
-        <div className='planetary__uranus'>
+        <Link to='/neptune'>
+          <img src={Neptune} alt='' />
+        </Link>
+      </div>
+      <div className='planetary__uranus'>
+        <Link to='/uranus'>
           <img src={Uranus} alt='' />
-          <div className='planetary__saturn'>
-            <img src={Saturn} alt='' />
-            <div className='planetary__jupiter'>
-              <img src={Jupiter} alt='' />
-              <div className='planetary__mars'>
-                <img src={Mars} alt='' />
-                <div className='planetary__earth'>
-                  <img src={Earth} alt='' />{' '}
-                  <div className='planetary__venus'>
-                    <img src={Venus} alt='' />
-                    <div className='planetary__mercury'>
-                      <img src={Mercury} alt='' />{' '}
-                      <div className='planetary__sun'></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </Link>
+      </div>
+      <div className='planetary__saturn'>
+        <Link to='/saturn'>
+          <img src={Saturn} alt='' />
+        </Link>
+      </div>
+      <div className='planetary__jupiter'>
+        <Link to='/jupiter'>
+          <img src={Jupiter} alt='' />
+        </Link>
+      </div>
+      <div className='planetary__mars'>
+        <Link to='/mars'>
+          <img src={Mars} alt='' />
+        </Link>
+      </div>
+      <div className='planetary__earth'>
+        <Link to='/earth'>
+          <img src={Earth} alt='' />
+        </Link>
+      </div>
+      <div className='planetary__venus'>
+        <Link to='/venus'>
+          <img src={Venus} alt='' />
+        </Link>
+      </div>
+      <div className='planetary__mercury'>
+        <Link to='/mercury'>
+          <img src={Mercury} alt='' />
+        </Link>
+        <div className='planetary__sun'></div>
       </div>
     </div>
   );

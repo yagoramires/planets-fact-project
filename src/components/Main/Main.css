@@ -1,3 +1,19 @@
+/* @keyframes fromRight {
+  from {
+    margin-right: -5rem;
+  }
+
+  to {
+    margin-right: 0;
+  }
+}
+
+.text-wrapper p {
+  animation-name: fromRight;
+  animation-duration: 2s;
+} */
+
+
 .menu-wrapper {
   display: flex;
   justify-content: space-evenly;
@@ -89,6 +105,9 @@
   gap: 1rem;
 
   text-align: center;
+
+  animation-name: fromRight;
+  animation-duration: 2s;
 }
 
 .text-wrapper span {
