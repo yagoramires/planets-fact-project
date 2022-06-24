@@ -86,48 +86,32 @@ const Header = () => {
         <nav className='menu__nav'>
           <ul className='menu__ul'>
             <li className='menu__li menu__li--mercury'>
-              <button>
-                <Link to='/mercury' className='link'>
-                  Mercury
-                </Link>
-              </button>
+              <Link to='/mercury' className='link'>
+                Mercury
+              </Link>
             </li>
             <li className='menu__li menu__li--venus'>
-              <button>
-                <Link to='/venus'>Venus</Link>
-              </button>
+              <Link to='/venus'>Venus</Link>
             </li>
             <li className='menu__li menu__li--earth'>
-              <button>
-                <Link to='/earth'>Earth</Link>
-              </button>
+              <Link to='/earth'>Earth</Link>
             </li>
             <li className='menu__li menu__li--mars'>
-              <button>
-                <Link to='/mars'>Mars</Link>
-              </button>
+              <Link to='/mars'>Mars</Link>
             </li>
             <li className='menu__li menu__li--jupiter'>
-              <button>
-                <Link to='/jupiter'>Jupiter</Link>
-              </button>
+              <Link to='/jupiter'>Jupiter</Link>
             </li>
             <li className='menu__li menu__li--saturn'>
-              <button>
-                <Link to='/saturn'>Saturn</Link>
-              </button>
+              <Link to='/saturn'>Saturn</Link>
             </li>
             <li className='menu__li menu__li--uranus'>
-              <button>
-                <Link to='/uranus'>Uranus</Link>
-              </button>
+              <Link to='/uranus'>Uranus</Link>
             </li>
             <li className='menu__li menu__li--neptune'>
-              <button>
-                <Link className='menu__li menu__li--neptune' to='/neptune'>
-                  Neptune
-                </Link>
-              </button>
+              <Link className='menu__li menu__li--neptune' to='/neptune'>
+                Neptune
+              </Link>
             </li>
           </ul>
         </nav>

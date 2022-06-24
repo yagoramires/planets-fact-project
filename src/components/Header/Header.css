@@ -137,9 +137,6 @@ a:-webkit-any-link {
 
   .menu__li {
     list-style-type: none;
-  }
-
-  .menu__li button {
     border: none;
     background-color: transparent;
     font-family: var(--spartan);
@@ -158,11 +155,11 @@ a:-webkit-any-link {
 
 @media (min-width:1200px) {
   .header {
-    padding: 1.75rem 2rem;
     flex-direction: row;
   }
 
   .menu {
+    padding: 1.3rem 2rem;
     width: 50%;
     min-width: 600px;
   }
