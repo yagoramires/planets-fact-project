@@ -1,12 +1,9 @@
-import Source from '../../assets/icon-source.svg';
-import Mercury from '../../assets/planet-mercury.svg';
-import MercuryInternal from '../../assets/planet-mercury-internal.svg';
-import MercuryGeology from '../../assets/geology-mercury.png';
 import { useState } from 'react';
+import Source from '../../assets/icon-source.svg';
 
 import './Main.css';
 
-const Main = ({ data }) => {
+const Main = ({ data, imageArray }) => {
   const [overview, setOverview] = useState(true);
   const [structure, setStructure] = useState(false);
   const [surface, setSurface] = useState(false);
@@ -31,7 +28,7 @@ const Main = ({ data }) => {
 
   return (
     <>
-      {data.length === 0 ? (
+      {data === undefined ? (
         <></>
       ) : (
         <main>
@@ -39,7 +36,7 @@ const Main = ({ data }) => {
             <div className='menu-wrapper'>
               <span
                 className={`menu-wrapper__item ${
-                  overview ? 'mercury-active' : ''
+                  overview ? `${data.name.toLowerCase()}-active` : ''
                 }`}
                 onClick={handleClickOverview}
               >
@@ -47,7 +44,7 @@ const Main = ({ data }) => {
               </span>
               <span
                 className={`menu-wrapper__item ${
-                  structure ? 'mercury-active' : ''
+                  structure ? `${data.name.toLowerCase()}-active` : ''
                 }`}
                 onClick={handleClickStucture}
               >
@@ -55,7 +52,7 @@ const Main = ({ data }) => {
               </span>
               <span
                 className={`menu-wrapper__item ${
-                  surface ? 'mercury-active' : ''
+                  surface ? `${data.name.toLowerCase()}-active` : ''
                 }`}
                 onClick={handleClickSurface}
               >
@@ -65,7 +62,7 @@ const Main = ({ data }) => {
 
             {overview ? (
               <div className='planet-image'>
-                <img src={Mercury} alt='' />
+                <img src={imageArray.planet} alt='' />
               </div>
             ) : (
               <></>
@@ -73,7 +70,7 @@ const Main = ({ data }) => {
 
             {structure ? (
               <div className='planet-image'>
-                <img src={MercuryInternal} alt='' />
+                <img src={imageArray.planetInternal} alt='' />
               </div>
             ) : (
               <></>
@@ -82,9 +79,9 @@ const Main = ({ data }) => {
             {surface ? (
               <div className='planet-image'>
                 <div>
-                  <img src={Mercury} alt='' />
+                  <img src={imageArray.planet} alt='' />
                   <img
-                    src={MercuryGeology}
+                    src={imageArray.planetGeology}
                     alt=''
                     className='planet-image--geology'
                   />
@@ -96,12 +93,12 @@ const Main = ({ data }) => {
 
             {overview ? (
               <div className='text-wrapper'>
-                <h2>{data[0].name}</h2>
-                <p>{data[0].overview.content}</p>
+                <h2>{data.name}</h2>
+                <p>{data.overview.content}</p>
                 <span>
                   Source :
                   <a
-                    href={data[0].overview.source}
+                    href={data.overview.source}
                     target='_blank'
                     rel='noreferrer'
                   >
@@ -115,12 +112,12 @@ const Main = ({ data }) => {
 
             {structure ? (
               <div className='text-wrapper'>
-                <h2>{data[0].name}</h2>
-                <p>{data[0].structure.content}</p>
+                <h2>{data.name}</h2>
+                <p>{data.structure.content}</p>
                 <span>
                   Source :
                   <a
-                    href={data[0].structure.source}
+                    href={data.structure.source}
                     target='_blank'
                     rel='noreferrer'
                   >
@@ -134,12 +131,12 @@ const Main = ({ data }) => {
 
             {surface ? (
               <div className='text-wrapper'>
-                <h2>{data[0].name}</h2>
-                <p>{data[0].geology.content}</p>
+                <h2>{data.name}</h2>
+                <p>{data.geology.content}</p>
                 <span>
                   Source :
                   <a
-                    href={data[0].geology.source}
+                    href={data.geology.source}
                     target='_blank'
                     rel='noreferrer'
                   >
@@ -157,7 +154,7 @@ const Main = ({ data }) => {
                   ROTATION TIME
                 </span>
                 <span className='cards-wrapper__card--info'>
-                  {data[0].rotation}
+                  {data.rotation}
                 </span>
               </div>
               <div className='cards-wrapper__card'>
@@ -165,21 +162,19 @@ const Main = ({ data }) => {
                   REVOLUTION TIME
                 </span>
                 <span className='cards-wrapper__card--info'>
-                  {data[0].revolution}
+                  {data.revolution}
                 </span>
               </div>
               <div className='cards-wrapper__card'>
                 <span className='cards-wrapper__card--label'>radius</span>
-                <span className='cards-wrapper__card--info'>
-                  {data[0].radius}
-                </span>
+                <span className='cards-wrapper__card--info'>{data.radius}</span>
               </div>
               <div className='cards-wrapper__card'>
                 <span className='cards-wrapper__card--label'>
                   AVERAGE TEMP.
                 </span>
                 <span className='cards-wrapper__card--info'>
-                  {data[0].temperature}
+                  {data.temperature}
                 </span>
               </div>
             </div>
