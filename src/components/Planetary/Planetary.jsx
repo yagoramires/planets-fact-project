@@ -53,8 +53,8 @@ const Planetary = () => {
         <Link to='/mercury'>
           <img src={Mercury} alt='' />
         </Link>
-        <div className='planetary__sun'></div>
       </div>
+      <div className='planetary__sun'></div>
     </div>
   );
 };
