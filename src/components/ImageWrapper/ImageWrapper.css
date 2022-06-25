@@ -1,0 +1,175 @@
+.planet-image {
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateY(50px) translateX(160px) rotate(20deg);
+
+    animation-name: planetTransition;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.planet-image div {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.planet-image--geology {
+    position: absolute;
+    /* bottom: -8%;
+    left: -39%; */
+    width: 200px;
+    transform: scale(0.5);
+}
+
+.size-mercury {
+    height: 111px;
+    width: 111px;
+}
+
+.size-venus {
+    height: 173px;
+    width: 173px;
+}
+
+.size-earth {
+    height: 192px;
+    width: 192px;
+}
+
+.size-mars {
+    height: 141px;
+    width: 141px;
+}
+
+.size-jupiter {
+    height: 224px;
+    width: 224px;
+}
+
+.size-saturn {
+    height: 305px;
+    width: 305px;
+}
+
+.size-uranus {
+    height: 176px;
+    width: 176px;
+}
+
+.size-neptune {
+    height: 164px;
+    width: 164px;
+}
+
+@media (min-width: 768px) {
+    .planet-image {
+        grid-area: 1 / 1 / 2 / 3;
+        height: 100%;
+    }
+
+    .planet-image--geology {
+        bottom: -25%;
+        left: -4%;
+        transform: scale(0.7);
+    }
+
+    .size-mercury {
+        height: 184px;
+        width: 184px;
+    }
+
+    .size-venus {
+        height: 284px;
+        width: 284px;
+    }
+
+    .size-earth {
+        height: 317px;
+        width: 317px;
+    }
+
+    .size-mars {
+        height: 233px;
+        width: 233px;
+    }
+
+    .size-jupiter {
+        height: 369px;
+        width: 369px;
+    }
+
+    .size-saturn {
+        height: 422px;
+        width: 422px;
+    }
+
+    .size-uranus {
+        height: 290px;
+        width: 290px;
+    }
+
+    .size-neptune {
+        height: 271px;
+        width: 271px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .planet-image {
+        grid-area: 1 / 1 / 3 / 2;
+        height: 100%;
+    }
+
+    .planet-image--geology {
+        top: 50%;
+        left: 20%;
+        transform: scale(1);
+    }
+
+    .size-mercury {
+        height: 290px;
+        width: 290px;
+    }
+
+    .size-venus {
+        height: 450px;
+        width: 450px;
+    }
+
+    .size-earth {
+        height: 500px;
+        width: 500px;
+    }
+
+    .size-mars {
+        height: 368px;
+        width: 368px;
+    }
+
+    .size-jupiter {
+        height: 582px;
+        width: 582px;
+    }
+
+    .size-saturn {
+        height: 627px;
+        width: 627px;
+    }
+
+    .size-uranus {
+        height: 458px;
+        width: 458px;
+    }
+
+    .size-neptune {
+        height: 428px;
+        width: 428px;
+    }
+}
