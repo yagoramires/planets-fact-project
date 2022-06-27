@@ -1,29 +1,34 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ModalIcon from '../../assets/icon-hamburger.svg';
 import Chevron from '../../assets/icon-chevron.svg';
 import './Header.css';
+import { useContext } from 'react';
 import { TextWrapperContext } from '../contexts/TextWrapperContext';
 
 const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
 
-  const { handleClickOverview } = useContext(TextWrapperContext);
+  const { setOverview, setStructure, setSurface } =
+    useContext(TextWrapperContext);
 
   const handleModal = () => {
     if (modalOpen) {
-      setHidden(true)
+      setHidden(true);
       setTimeout(() => {
-        setModalOpen(false)
-      }, 500)
+        setModalOpen(false);
+      }, 500);
     } else {
-      setHidden(false)
-      setModalOpen(true)
+      setHidden(false);
+      setModalOpen(true);
     }
   };
 
   const handleSelect = (e) => {
+    setOverview(true);
+    setStructure(false);
+    setSurface(false);
     const link = document.querySelectorAll('.menu__link');
     const li = document.querySelectorAll('.menu__li');
 
@@ -32,19 +37,18 @@ const Header = () => {
         el.classList.remove('active');
       }
     });
-    
+
     li.forEach((el) => {
       if (el.classList.contains('active')) {
         el.classList.remove('active');
       }
     });
-    
+
     if (e.target.classList.contains('menu__link')) {
       e.target.classList.add('active');
     } else if (e.target.classList.contains('menu__li')) {
       e.target.parentNode.classList.add('active');
     }
-    handleClickOverview();
   };
 
   return (
@@ -59,7 +63,11 @@ const Header = () => {
           className='modal__icon'
           onClick={handleModal}
         />
-        <nav className={`modal__nav ${modalOpen ? '' : 'hidden'} ${hidden ? 'hideModal' : ''}`}>
+        <nav
+          className={`modal__nav ${modalOpen ? '' : 'hidden'} ${
+            hidden ? 'hideModal' : ''
+          }`}
+        >
           <ul className='modal__ul' onClick={handleModal}>
             <li className='modal__li'>
               <span className='modal__text'>

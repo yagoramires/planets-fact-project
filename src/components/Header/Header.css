@@ -231,7 +231,7 @@ a .menu__li {
     transform: scale(0, 1);
   }
 
-  .menu__link--mercury:hover  .menu__li::before {
+  .menu__link--mercury:hover .menu__li::before {
     background-color: #DEF4FC;
     transform: scale(1, 1);
   }
@@ -261,12 +261,12 @@ a .menu__li {
     transform: scale(1, 1);
   }
 
-  .menu__link--uranus:hover.menu__li::before {
+  .menu__link--uranus:hover .menu__li::before {
     background-color: #65F0D5;
     transform: scale(1, 1);
   }
 
-  .menu__link--neptune:hover.menu__li::before {
+  .menu__link--neptune:hover .menu__li::before {
     background-color: #497EFA;
     transform: scale(1, 1);
   }
@@ -276,11 +276,11 @@ a .menu__li {
   }
 
   .menu__link--venus.active {
-    border-top: 5px solid  #F7CC7F;
+    border-top: 5px solid #F7CC7F;
   }
 
   .menu__link--earth.active {
-    border-top: 5px solid  #545BFE;
+    border-top: 5px solid #545BFE;
   }
 
   .menu__link--mars.active {
@@ -288,19 +288,19 @@ a .menu__li {
   }
 
   .menu__link--jupiter.active {
-    border-top: 5px solid  #ECAD7A;
+    border-top: 5px solid #ECAD7A;
   }
 
   .menu__link--saturn.active {
-    border-top: 5px solid  #FCCB6B;
+    border-top: 5px solid #FCCB6B;
   }
 
   .menu__link--uranus.active {
-    border-top: 5px solid  #65F0D5;
+    border-top: 5px solid #65F0D5;
   }
 
   .menu__link--neptune.active {
-    border-top: 5px solid  #497EFA;
+    border-top: 5px solid #497EFA;
   }
 
 }
