@@ -7,12 +7,21 @@ import { TextWrapperContext } from '../contexts/TextWrapperContext';
 
 const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
-  const { handleClickOverview } = useContext(TextWrapperContext);
+  const { handleClickOverview, setLoad } = useContext(TextWrapperContext);
 
   const handleModal = () => {
-    modalOpen ? setModalOpen(false) : setModalOpen(true);
-    handleSelect();
+    if (modalOpen) {
+      setHidden(true)
+      setTimeout(() => {
+        setModalOpen(false)
+      }, 500)
+    } else {
+      setHidden(false)
+      setModalOpen(true)
+    }
+    setLoad(true)
   };
 
   const handleSelect = (e) => {
@@ -34,6 +43,7 @@ const Header = () => {
     e.target.classList.add('active');
     e.target.parentNode.classList.add('active');
 
+    setLoad(true)
     handleClickOverview();
   };
 
@@ -49,7 +59,7 @@ const Header = () => {
           className='modal__icon'
           onClick={handleModal}
         />
-        <nav className={`modal__nav ${modalOpen ? '' : 'hidden'}`}>
+        <nav className={`modal__nav ${modalOpen ? '' : 'hidden'} ${hidden ? 'hideModal' : ''}`}>
           <ul className='modal__ul' onClick={handleModal}>
             <li className='modal__li'>
               <span className='modal__text'>

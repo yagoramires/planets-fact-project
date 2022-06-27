@@ -3,14 +3,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: -1;
+}
 
+.planet-image.onLoad {
     opacity: 0;
     transform: translateY(50px) translateX(160px) rotate(20deg);
-
     animation-name: planetTransition;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
+}
+.planet-image.active {
+    transform: translateY(100px) translateX(25px) rotate(180deg) scale(0.1);
+    animation-name: ImageWrapperActive;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+.planet-image.activeChange {
+    transform: translateY(0) translateX(0) rotate(0) scale(1);
+    animation-name: ImageWrapperChange;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    opacity: 1;
 }
 
 .planet-image div {
