@@ -34,6 +34,7 @@ body {
   background-size: cover;
   background-color: var(--darkBlue);
   color: var(--white);
+  overflow-x: hidden;
 }
 
 .button {
@@ -93,5 +94,27 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360000deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes zoomin {
+  from {
+    opacity: 0.5;
+    transform: rotate(-20deg) scale(3);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
   }
 }

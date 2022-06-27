@@ -9,19 +9,30 @@ const Header = () => {
 
   const handleModal = () => {
     modalOpen ? setModalOpen(false) : setModalOpen(true);
+    handleSelect();
   };
 
-  // const [mercury, setMercury] = useState(true);
+  const handleSelect = (e) => {
+    const item = document.querySelectorAll('.menu__li');
 
-  // const handleClickOverview = () => {
-  //   setOverview(true);
-  //   setStructure(false);
-  //   setSurface(false);
-  // };
+    item.forEach((el) => {
+      if (el.classList.contains('active')) {
+        el.classList.remove('active');
+      }
+    });
+
+    if (e.classList.contains('menu__li')) {
+      e.target.classList.add('active');
+    }
+
+    if (e.classList.contains('link')) {
+      e.target.parentNode.classList.add('active');
+    }
+  };
 
   return (
     <div className='header'>
-      <Link to='/' className='header__logo'>
+      <Link to='/' className='header__logo' onClick={handleSelect}>
         the planets
       </Link>
       <div className='modal'>
@@ -54,7 +65,7 @@ const Header = () => {
             <li className='modal__li'>
               <span className='modal__text'>
                 <div className='modal__circle modal__circle--earth'></div>
-                <Link to='/earth' onClick={handleModal}>
+                <Link to='/earth' className='link' onClick={handleModal}>
                   Earth
                 </Link>
               </span>
@@ -111,30 +122,31 @@ const Header = () => {
       <div className='menu'>
         <nav className='menu__nav'>
           <ul className='menu__ul'>
-            <li className='menu__li menu__li--mercury'>
-              <Link to='/mercury' className='link'>
-                Mercury
-              </Link>
+            <li className={`menu__li menu__li--mercury`} onClick={handleSelect}>
+              <Link to='/mercury'>Mercury</Link>
             </li>
-            <li className='menu__li menu__li--venus'>
+            <li className={`menu__li menu__li--venus`} onClick={handleSelect}>
               <Link to='/venus'>Venus</Link>
             </li>
-            <li className='menu__li menu__li--earth'>
+            <li className={`menu__li menu__li--earth`} onClick={handleSelect}>
               <Link to='/earth'>Earth</Link>
             </li>
-            <li className='menu__li menu__li--mars'>
+            <li className={`menu__li menu__li--mars`} onClick={handleSelect}>
               <Link to='/mars'>Mars</Link>
             </li>
-            <li className='menu__li menu__li--jupiter'>
+            <li className={`menu__li menu__li--jupiter`} onClick={handleSelect}>
               <Link to='/jupiter'>Jupiter</Link>
             </li>
-            <li className='menu__li menu__li--saturn'>
+            <li className={`menu__li menu__li--saturn`} onClick={handleSelect}>
               <Link to='/saturn'>Saturn</Link>
             </li>
-            <li className='menu__li menu__li--uranus'>
+            <li className={`menu__li menu__li--uranus`} onClick={handleSelect}>
               <Link to='/uranus'>Uranus</Link>
             </li>
-            <li className='menu__li menu__li--neptune'>
+            <li
+              className={`menu__li menu__li--neptune `}
+              onClick={handleSelect}
+            >
               <Link to='/neptune'>Neptune</Link>
             </li>
           </ul>
