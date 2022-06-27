@@ -53,8 +53,8 @@ const Header = () => {
           <ul className='modal__ul' onClick={handleModal}>
             <li className='modal__li'>
               <span className='modal__text'>
+                <div className='modal__circle modal__circle--mercury'></div>
                 <Link to='/mercury' onClick={handleModal}>
-                  <div className='modal__circle modal__circle--mercury'></div>
                   Mercury
                 </Link>
               </span>
