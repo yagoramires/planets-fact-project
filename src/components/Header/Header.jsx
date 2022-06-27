@@ -9,7 +9,7 @@ const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
 
-  const { handleClickOverview, setLoad } = useContext(TextWrapperContext);
+  const { handleClickOverview } = useContext(TextWrapperContext);
 
   const handleModal = () => {
     if (modalOpen) {
@@ -21,7 +21,6 @@ const Header = () => {
       setHidden(false)
       setModalOpen(true)
     }
-    setLoad(true)
   };
 
   const handleSelect = (e) => {
@@ -33,17 +32,18 @@ const Header = () => {
         el.classList.remove('active');
       }
     });
-
+    
     li.forEach((el) => {
       if (el.classList.contains('active')) {
         el.classList.remove('active');
       }
     });
-
-    e.target.classList.add('active');
-    e.target.parentNode.classList.add('active');
-
-    setLoad(true)
+    
+    if (e.target.classList.contains('menu__link')) {
+      e.target.classList.add('active');
+    } else if (e.target.classList.contains('menu__li')) {
+      e.target.parentNode.classList.add('active');
+    }
     handleClickOverview();
   };
 

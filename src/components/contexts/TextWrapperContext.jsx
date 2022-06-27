@@ -23,7 +23,6 @@ export function TextWrapperProvider({ children }) {
       setActiveChange(false)
       setActive(true)
     }, 1500)
-
   };
 
   const handleClickStucture = () => {
@@ -64,9 +63,11 @@ export function TextWrapperProvider({ children }) {
         handleClickStucture,
         handleClickSurface,
         onLoad,
+        setOnLoad,
         active,
         setActive,
-        activeChange
+        activeChange,
+        setActiveChange
       }}
     >
       {children}

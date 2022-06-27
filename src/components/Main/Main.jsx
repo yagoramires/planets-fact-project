@@ -1,3 +1,4 @@
+
 import CardsWrapper from '../CardsWrapper/CardsWrapper';
 import ImageWrapper from '../ImageWrapper/ImageWrapper';
 import MenuWrapper from '../MenuWrapper/MenuWrapper';
