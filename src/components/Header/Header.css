@@ -11,6 +11,10 @@ a:-webkit-any-link {
   color: var(--white);
 }
 
+a .menu__li {
+  list-style-type: none;
+}
+
 .header__logo {
   font-family: var(--antonio);
   font-weight: var(--regular);
@@ -20,7 +24,6 @@ a:-webkit-any-link {
   color: var(--white);
   text-transform: uppercase;
 }
-
 
 .modal__icon {
   width: 1.5rem;
@@ -107,13 +110,12 @@ a:-webkit-any-link {
   display: none;
 }
 
-@media (min-width:720px) {
+@media (min-width:768px) {
   .modal {
     display: none;
   }
 
   .header {
-    /* padding: 2rem 3.3rem 1.7rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,25 +137,24 @@ a:-webkit-any-link {
     align-items: center;
   }
 
-  .menu__li {
-    list-style-type: none;
-    border: none;
-    background-color: transparent;
+  .menu__link {
     font-family: var(--spartan);
     font-weight: var(--bold);
     font-size: .7rem;
-    line-height: 1.563rem;
     color: var(--white);
-    list-style-type: none;
-    text-transform: uppercase;
-    border-top: 6px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
     text-decoration: none;
+    list-style-type: none;
+    border: none;
+    border-top: 6px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    list-style-type: none;
+    text-transform: uppercase;
   }
 
 }
 
-@media (min-width:1200px) {
+@media (min-width:1440px) {
   .header {
     flex-direction: row;
     padding: 0 2rem;
@@ -165,94 +166,96 @@ a:-webkit-any-link {
     min-width: 600px;
   }
 
-  .menu__li {
+  .menu__link {
     padding: 19px 0 1.5rem;
+    z-index: 99;
   }
 
-  .menu__li a {
+  /* 
+  .menu__link .menu__li {
     position: relative;
-  }
+  } */
 
-  .menu__li a::before {
+  .menu__link .menu__li::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 6.5px;
-    top: -2rem;
+    height: 5px;
+    top: -23px;
     transition: transform 0.5s ease;
     transform: scale(0, 1);
   }
 
-  .menu__li--mercury:hover.menu__li a::before {
+  .menu__li--mercury:hover.menu__li::before {
     background-color: var(--mercury);
     transform: scale(1, 1);
   }
 
-  .menu__li--venus:hover.menu__li a::before {
+  .menu__li--venus:hover.menu__li::before {
     background-color: var(--venus);
     transform: scale(1, 1);
   }
 
-  .menu__li--earth:hover.menu__li a::before {
+  .menu__li--earth:hover.menu__li::before {
     background-color: var(--earth);
     transform: scale(1, 1);
   }
 
-  .menu__li--mars:hover.menu__li a::before {
+  .menu__li--mars:hover.menu__li::before {
     background-color: var(--mars);
     transform: scale(1, 1);
   }
 
-  .menu__li--jupiter:hover.menu__li a::before {
+  .menu__li--jupiter:hover.menu__li::before {
     background-color: var(--jupiter);
     transform: scale(1, 1);
   }
 
-  .menu__li--saturn:hover.menu__li a::before {
+  .menu__li--saturn:hover.menu__li::before {
     background-color: var(--saturn);
     transform: scale(1, 1);
   }
 
-  .menu__li--uranus:hover.menu__li a::before {
+  .menu__li--uranus:hover.menu__li::before {
     background-color: var(--uranus);
     transform: scale(1, 1);
   }
 
-  .menu__li--neptune:hover.menu__li a::before {
+  .menu__li--neptune:hover.menu__li::before {
     background-color: var(--neptune);
     transform: scale(1, 1);
   }
 
-  .menu__li--mercury.active {
-    border-top: 6px solid var(--mercury);
+  .menu__link--mercury.active {
+    border-top: 5px solid var(--mercury);
   }
 
-  .menu__li--venus.active {
-    border-top: 6px solid var(--venus);
+  .menu__link--venus.active {
+    border-top: 5px solid var(--venus);
   }
 
-  .menu__li--earth.active {
-    border-top: 6px solid var(--earth);
+  .menu__link--earth.active {
+    border-top: 5px solid var(--earth);
   }
 
-  .menu__li--mars.active {
-    border-top: 6px solid var(--mars);
+  .menu__link--mars.active {
+    border-top: 5px solid var(--mars);
   }
 
-  .menu__li--jupiter.active {
-    border-top: 6px solid var(--jupiter);
+  .menu__link--jupiter.active {
+    border-top: 5px solid var(--jupiter);
   }
 
-  .menu__li--saturn.active {
-    border-top: 6px solid var(--saturn);
+  .menu__link--saturn.active {
+    border-top: 5px solid var(--saturn);
   }
 
-  .menu__li--uranus.active {
-    border-top: 6px solid var(--uranus);
+  .menu__link--uranus.active {
+    border-top: 5px solid var(--uranus);
   }
 
-  .menu__li--neptune.active {
-    border-top: 6px solid var(--neptune);
+  .menu__link--neptune.active {
+    border-top: 5px solid var(--neptune);
   }
 
 }

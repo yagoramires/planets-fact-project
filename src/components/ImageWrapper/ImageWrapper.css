@@ -22,8 +22,9 @@
 
 .planet-image--geology {
     position: absolute;
-    /* bottom: -8%;
-    left: -39%; */
+    top: 30%;
+    left: 50%;
+    margin-left: -100px;
     width: 200px;
     transform: scale(0.5);
 }
@@ -75,8 +76,7 @@
     }
 
     .planet-image--geology {
-        bottom: -25%;
-        left: -4%;
+        top: 50%;
         transform: scale(0.7);
     }
 
@@ -128,8 +128,8 @@
     }
 
     .planet-image--geology {
-        top: 50%;
-        left: 20%;
+        /* top: 50%;
+        left: 20%; */
         transform: scale(1);
     }
 

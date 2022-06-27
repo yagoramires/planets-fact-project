@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ModalIcon from '../../assets/icon-hamburger.svg';
 import Chevron from '../../assets/icon-chevron.svg';
 import './Header.css';
+import { TextWrapperContext } from '../contexts/TextWrapperContext';
 
 const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
+
+  const { handleClickOverview } = useContext(TextWrapperContext);
 
   const handleModal = () => {
     modalOpen ? setModalOpen(false) : setModalOpen(true);
@@ -13,21 +16,25 @@ const Header = () => {
   };
 
   const handleSelect = (e) => {
-    const item = document.querySelectorAll('.menu__li');
+    const link = document.querySelectorAll('.menu__link');
+    const li = document.querySelectorAll('.menu__li');
 
-    item.forEach((el) => {
+    link.forEach((el) => {
       if (el.classList.contains('active')) {
         el.classList.remove('active');
       }
     });
 
-    if (e.classList.contains('menu__li')) {
-      e.target.classList.add('active');
-    }
+    li.forEach((el) => {
+      if (el.classList.contains('active')) {
+        el.classList.remove('active');
+      }
+    });
 
-    if (e.classList.contains('link')) {
-      e.target.parentNode.classList.add('active');
-    }
+    e.target.classList.add('active');
+    e.target.parentNode.classList.add('active');
+
+    handleClickOverview();
   };
 
   return (
@@ -46,8 +53,8 @@ const Header = () => {
           <ul className='modal__ul' onClick={handleModal}>
             <li className='modal__li'>
               <span className='modal__text'>
-                <div className='modal__circle modal__circle--mercury'></div>
                 <Link to='/mercury' onClick={handleModal}>
+                  <div className='modal__circle modal__circle--mercury'></div>
                   Mercury
                 </Link>
               </span>
@@ -122,33 +129,62 @@ const Header = () => {
       <div className='menu'>
         <nav className='menu__nav'>
           <ul className='menu__ul'>
-            <li className={`menu__li menu__li--mercury`} onClick={handleSelect}>
-              <Link to='/mercury'>Mercury</Link>
-            </li>
-            <li className={`menu__li menu__li--venus`} onClick={handleSelect}>
-              <Link to='/venus'>Venus</Link>
-            </li>
-            <li className={`menu__li menu__li--earth`} onClick={handleSelect}>
-              <Link to='/earth'>Earth</Link>
-            </li>
-            <li className={`menu__li menu__li--mars`} onClick={handleSelect}>
-              <Link to='/mars'>Mars</Link>
-            </li>
-            <li className={`menu__li menu__li--jupiter`} onClick={handleSelect}>
-              <Link to='/jupiter'>Jupiter</Link>
-            </li>
-            <li className={`menu__li menu__li--saturn`} onClick={handleSelect}>
-              <Link to='/saturn'>Saturn</Link>
-            </li>
-            <li className={`menu__li menu__li--uranus`} onClick={handleSelect}>
-              <Link to='/uranus'>Uranus</Link>
-            </li>
-            <li
-              className={`menu__li menu__li--neptune `}
+            <Link
+              to='/mercury'
+              className='menu__link menu__link--mercury'
               onClick={handleSelect}
             >
-              <Link to='/neptune'>Neptune</Link>
-            </li>
+              <li className='menu__li menu__li--mercury'>Mercury</li>
+            </Link>
+            <Link
+              to='/venus'
+              className='menu__link menu__link--venus'
+              onClick={handleSelect}
+            >
+              <li className='menu__li menu__li--venus'>venus</li>
+            </Link>
+            <Link
+              to='/earth'
+              className='menu__link menu__link--earth'
+              onClick={handleSelect}
+            >
+              <li className='menu__li menu__li--earth'>earth</li>
+            </Link>
+            <Link
+              to='/mars'
+              className='menu__link menu__link--mars'
+              onClick={handleSelect}
+            >
+              <li className='menu__li menu__li--mars'>mars</li>
+            </Link>
+            <Link
+              to='/jupiter'
+              className='menu__link menu__link--jupiter'
+              onClick={handleSelect}
+            >
+              <li className='menu__li menu__li--jupiter'>jupiter</li>
+            </Link>
+            <Link
+              to='/saturn'
+              className='menu__link menu__link--saturn'
+              onClick={handleSelect}
+            >
+              <li className='menu__li menu__li--saturn'>saturn</li>
+            </Link>
+            <Link
+              to='/uranus'
+              className='menu__link menu__link--uranus'
+              onClick={handleSelect}
+            >
+              <li className='menu__li menu__li--uranus'>uranus</li>
+            </Link>
+            <Link
+              to='/neptune'
+              className='menu__link  menu__link--neptune'
+              onClick={handleSelect}
+            >
+              <li className='menu__li menu__li--neptune'>neptune</li>
+            </Link>
           </ul>
         </nav>
       </div>

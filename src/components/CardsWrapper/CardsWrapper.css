@@ -42,13 +42,6 @@
     text-transform: uppercase;
 }
 
-.menu-wrapper__item {
-    transition: .5s ease;
-}
-
-.menu-wrapper__item:hover {
-    background-color: var(--gray);
-}
 
 @media (min-width: 768px) {
 
@@ -94,5 +87,13 @@
     .cards-wrapper__card {
         padding: 1.5rem;
         max-height: 120px;
+    }
+
+    .menu-wrapper__item {
+        transition: .5s ease;
+    }
+
+    .menu-wrapper__item:hover {
+        background-color: var(--gray);
     }
 }

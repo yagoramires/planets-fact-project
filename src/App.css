@@ -51,15 +51,6 @@ body {
   text-transform: uppercase;
 }
 
-.button span {
-  opacity: 0.5;
-  padding-right: 1.75rem;
-}
-
-.button:hover {
-  background-color: var(--darkGray);
-}
-
 .hidden {
   display: none;
 }
