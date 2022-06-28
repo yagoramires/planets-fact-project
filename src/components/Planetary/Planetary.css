@@ -1,10 +1,11 @@
 .planetary {
   position: relative;
-  height: 100vh;
+  height: 105vh;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: zoomin 3s;
+  overflow-x: hidden;
 }
 
 .planetary__neptune {
@@ -311,4 +312,10 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .planetary {
+  height: 100vh;
+  }
 }
