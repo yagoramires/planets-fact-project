@@ -1,7 +1,8 @@
 # Planets Facts Site
 
+<p align="center">
 ![STATUS](https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-green)
-[![Linkedin Badge](https://img.shields.io/badge/-Yago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yagoramires/)](https://www.linkedin.com/in/yagoramires/)
+[![Linkedin Badge](https://img.shields.io/badge/-Yago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yagoramires/)](https://www.linkedin.com/in/yagoramires/)</p>
 
 ## Brief
 Your challenge is to build out this 8-page planets fact site and get it looking as close to the design as possible.

@@ -1,20 +1,24 @@
 .planetary {
+  opacity: 0;
   position: relative;
-  height: 110vh;
-  animation: zoomin 3s;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transform: scale(0.9);
+  
+  animation-name: zoomin;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 .planetary__neptune {
   position: absolute;
   border: 1px solid rgba(102, 166, 229, 0.12);
   border-radius: 100%;
-  width: 660px;
-  height: 660px;
+  min-width: 660px;
+  min-height: 660px;
 
   background-image: url('../../assets/background-stars.svg');
   background-repeat: no-repeat;
@@ -49,8 +53,8 @@
 .planetary__uranus {
   border: 1px solid rgba(102, 166, 229, 0.12);
   border-radius: 100%;
-  width: 550px;
-  height: 550px;
+  min-width: 550px;
+  min-height: 550px;
   position: absolute;
 
   background-image: url('../../assets/background-stars.svg');
@@ -85,8 +89,8 @@
 .planetary__saturn {
   border: 1px solid rgba(102, 166, 229, 0.12);
   border-radius: 100%;
-  width: 470px;
-  height: 470px;
+  min-width: 470px;
+  min-height: 470px;
   position: absolute;
 
   background-image: url('../../assets/background-stars.svg');
@@ -157,8 +161,8 @@
 .planetary__mars {
   border: 1px solid rgba(102, 166, 229, 0.12);
   border-radius: 100%;
-  width: 220px;
-  height: 220px;
+  min-width: 220px;
+  min-height: 220px;
   position: absolute;
 
   background-image: url('../../assets/background-stars.svg');
@@ -193,8 +197,8 @@
 .planetary__earth {
   border: 1px solid rgba(102, 166, 229, 0.12);
   border-radius: 100%;
-  width: 175px;
-  height: 175px;
+  min-width: 175px;
+  min-height: 175px;
   position: absolute;
 
   background-image: url('../../assets/background-stars.svg');
@@ -229,8 +233,8 @@
 .planetary__venus {
   border: 1px solid rgba(102, 166, 229, 0.12);
   border-radius: 100%;
-  width: 130px;
-  height: 130px;
+  min-width: 130px;
+  min-height: 130px;
   position: absolute;
 
   background-image: url('../../assets/background-stars.svg');
@@ -265,8 +269,8 @@
 .planetary__mercury {
   border: 1px solid rgba(102, 166, 229, 0.12);
   border-radius: 100%;
-  width: 100px;
-  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
   position: absolute;
 
   background-image: url('../../assets/background-stars.svg');
@@ -300,23 +304,23 @@
 
 .planetary__sun {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 80px;
-  width: 80px;
+  min-height: 80px;
+  min-width: 80px;
   border-radius: 1000px;
   background-image: url('../../assets/sun.png');
-  background-color: var(--yellow);
   background-size: cover;
   box-shadow: 0 0 10px 2px rgb(255 107 0 / 40%), 0 0 22px 11px rgb(255 203 0 / 13%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   z-index: -1;
 }
 
 @media (min-width: 768px) {
   .planetary {
-    margin-top: 1rem;
+    height: 100vh;
   }
 }
+/* 
+@media (min-width: 1440px) {
+  .planetary {
+    height: 100vh;
+  }
+} */
