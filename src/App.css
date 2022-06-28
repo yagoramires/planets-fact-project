@@ -26,8 +26,11 @@
 
 }
 
-body {
+html {
   min-height: 100vh;
+}
+
+body {
   background-image: url('./assets/background-stars.svg');
   background-repeat: no-repeat;
   background-position: center;
