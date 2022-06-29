@@ -1,7 +1,8 @@
 # Planets Facts Site
 
+<p align="center">
 ![STATUS](https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-green)
-<p align="center"> </p>
+</p>
 
 ## Brief
 Your challenge is to build out this 8-page planets fact site and get it looking as close to the design as possible.
@@ -12,14 +13,16 @@ If you choose to use a JS-heavy approach, we provide a local data.json file for 
 
 ## Features
 
-- Languages utilized: HTML, CSS, JS and ReactJS.
-- React Hooks: useEffect, useState and useContext.
+- Languages utilized: ``HTML, CSS, JS and ReactJS.``
+- React Hooks: ``useEffect, useState and useContext.``
 - Created Components and CSS for each session.
 - Full responsive Design for Mobile, Tablets and Desktop.
 - My first CSS animations (that was a lot of work :joy:)
 - All data was pull and converted from data.json file.
 
-<h2 align="center"> [App Working](https://planets-yago.vercel.app/) </h2>
+<h2 align="center">
+[App Working](https://planets-yago.vercel.app/) 
+</h2>
 
 
 <h4 align="center"> 
@@ -27,8 +30,7 @@ If you choose to use a JS-heavy approach, we provide a local data.json file for 
  <img style="border-radius: 50%;" src="https://i.imgur.com/z5JJCms.jpg" width="150px;" alt=""/>
 </h4>
 
-
-<sub><b>Yago Ramires</b></sub></a> <a href="https://github.com/yagoramires" title="Rocketseat">🚀</a>
-![Linkedin Badge](https://img.shields.io/badge/-Yago%20Ramires-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yagoramires/)](https://www.linkedin.com/in/yagoramires/)
 <p align="center"> 
+<sub><b>Yago Ramires</b></sub></a> <a href="https://github.com/yagoramires" title="Rocketseat">🚀</a>
+[![Linkedin Badge](https://img.shields.io/badge/-Yago%20Ramires-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yagoramires/)](https://www.linkedin.com/in/yagoramires/)]
 </p>
