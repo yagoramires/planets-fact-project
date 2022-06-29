@@ -1,6 +1,6 @@
 # Planets Facts Site
 
-<p align="center"> [![STATUS](https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-green)]</p>
+<p align="center"> ![STATUS](https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-green)</p>
 
 ## Brief
 Your challenge is to build out this 8-page planets fact site and get it looking as close to the design as possible.
@@ -28,5 +28,5 @@ If you choose to use a JS-heavy approach, we provide a local data.json file for 
 
 <p align="center"> 
 <sub><b>Yago Ramires</b></sub></a> <a href="https://github.com/yagoramires" title="Rocketseat">🚀</a>
-[![Linkedin Badge](https://img.shields.io/badge/-Yago%20Ramires-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yagoramires/)](https://www.linkedin.com/in/yagoramires/)]
+![Linkedin Badge](https://img.shields.io/badge/-Yago%20Ramires-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yagoramires/)](https://www.linkedin.com/in/yagoramires/)
 </p>
