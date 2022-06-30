@@ -14,12 +14,12 @@ If you choose to use a JS-heavy approach, we provide a local data.json file for 
 ---
 ## Features
 
-- Languages utilized: ``HTML, CSS, JS and ReactJS.``
-- React Hooks: ``useEffect, useState and useContext.``
-- Created Components and CSS for each session.
-- Full responsive Design for Mobile, Tablets and Desktop.
-- My first CSS animations (that was a lot of work :joy:)
-- All data was pull and converted from data.json file.
+- Languages utilized: ``HTML``, ``CSS``, ``JS`` and ``ReactJS.``
+- React Hooks: ``useEffect``, ``useState`` and ``useContext.``
+- Created ``Components`` and ``CSS`` for each session.
+- Full responsive design for Mobile, Tablets and Desktop.
+- My first ``CSS animations`` (that was a lot of work :joy:)
+- All data was pull and converted from a json file.
 
 
 ## Images
