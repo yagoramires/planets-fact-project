@@ -1,4 +1,4 @@
-# Planets Facts Site
+#  <a href="https://planets-yago.vercel.app/">  Planets Facts Site </a>
 
 
 <img src="https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-green" align="center">
@@ -21,7 +21,7 @@ If you choose to use a JS-heavy approach, we provide a local data.json file for 
 - All data was pull and converted from data.json file.
 
 <h2 align="center">
-![App Working](https://planets-yago.vercel.app/) 
+
 </h2>
 
 ### Autor
