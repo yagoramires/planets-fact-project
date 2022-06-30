@@ -24,13 +24,20 @@ If you choose to use a JS-heavy approach, we provide a local data.json file for 
 [App Working](https://planets-yago.vercel.app/) 
 </h2>
 
+### Autor
+
+---
 
 <h4 align="center"> 
 <a href="https://github.com/yagoramires">
- <img style="border-radius: 50%;" src="https://i.imgur.com/z5JJCms.jpg" width="150px;" alt=""/>
-</h4>
+ <img style="border-radius: 100%;" src="https://i.imgur.com/z5JJCms.jpg" width="150px;" alt=""/>
+ <br />
+ <sub><b>Yago Ramires</b></sub></a> <a href="https://github.com/yagoramires" title="Rocketseat">🚀</a>
 
-<p align="center"> 
-<sub><b>Yago Ramires</b></sub></a> <a href="https://github.com/yagoramires" title="Rocketseat">🚀</a>
-[![Linkedin Badge](https://img.shields.io/badge/-Yago%20Ramires-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yagoramires/)](https://www.linkedin.com/in/yagoramires/)]
-</p>
+ <br />
+</h4>
+<h4 align="center"> 
+
+[![Linkedin Badge](https://img.shields.io/badge/-Yago%20Ramires-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yagoramires/)](https://www.linkedin.com/in/yagoramires/)
+
+</h4>
