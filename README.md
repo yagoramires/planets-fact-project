@@ -11,6 +11,7 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 If you choose to use a JS-heavy approach, we provide a local data.json file for the planets. This means you'll be able to pull the data from there instead of using the separate .html files.
 
+---
 ## Features
 
 - Languages utilized: ``HTML, CSS, JS and ReactJS.``
@@ -20,13 +21,17 @@ If you choose to use a JS-heavy approach, we provide a local data.json file for 
 - My first CSS animations (that was a lot of work :joy:)
 - All data was pull and converted from data.json file.
 
-<h2 align="center">
 
-</h2>
+## Images
 
-### Autor
+<img src="https://i.imgur.com/aSRtjXd.jpg">
+
+
+<img src="https://i.imgur.com/xlb9eNn.jpg">
+
 
 ---
+## Author
 
 <h4 align="center"> 
 <a href="https://github.com/yagoramires">
