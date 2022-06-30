@@ -1,8 +1,8 @@
 # Planets Facts Site
 
-<p align="center">
-![STATUS](https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-green)
-</p>
+
+<img src="https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-green" align="center">
+
 
 ## Brief
 Your challenge is to build out this 8-page planets fact site and get it looking as close to the design as possible.
@@ -21,7 +21,7 @@ If you choose to use a JS-heavy approach, we provide a local data.json file for 
 - All data was pull and converted from data.json file.
 
 <h2 align="center">
-[App Working](https://planets-yago.vercel.app/) 
+![App Working](https://planets-yago.vercel.app/) 
 </h2>
 
 ### Autor
