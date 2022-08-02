@@ -1,48 +1,52 @@
-#  <a href="https://planets-yago.vercel.app/">  Planets Facts Site </a>
+<h1 > <a href="https://planets-yago.vercel.app/" target="_blank"> PLANETS FACTS </a> </h1>
 
+<p align="center">
+<img src="./src/assets/readme.gif" title="App demo" alt='App demo' />
+</p>
 
-<img src="https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-green" align="center">
+<p>
+In this code challenge, I built a web application that queries a JSON to retrieve planet data to show details for each planet.
+</p>
 
+<h2> Features: </h2>
+<ul>
+ <li><b>Languages utilized:</b> HTML, CSS & ReactJS.</li>
+ <li><b>React Hooks:</b> useEffect, useState and useContext.</li>
+ <li>Created Components and CSS for each session.</li>
+ <li>Full responsive design for Mobile, Tablets and Desktop.</li>
+ <li>My first <b>CSS animations</b> (that was a lot of work :joy:).</li>
+ <li>All data was pull and converted from a json file.</li>
+</ul>
 
-## Brief
-Your challenge is to build out this 8-page planets fact site and get it looking as close to the design as possible.
+<h2> Testing this app </h2>
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+```bash
+    # Clone repository
+    $ git clone https://github.com/yagoramires/movie-list.git
+    # Access the repository folder
+    $ cd movie-list
+    # Install the dependencies
+    $ yarn
+    # Run the application in development mode
+    $ yarn start
+    # The server will start on port:3000 - access http://localhost:3000/
+```
 
-If you choose to use a JS-heavy approach, we provide a local data.json file for the planets. This means you'll be able to pull the data from there instead of using the separate .html files.
+<h1> Author </h1>
 
----
-## Features
-
-- Languages utilized: ``HTML``, ``CSS``, ``JS`` and ``ReactJS``.
-- React Hooks: ``useEffect``, ``useState`` and ``useContext``.
-- Created ``Components`` and ``CSS`` for each session.
-- Full responsive design for Mobile, Tablets and Desktop.
-- My first ``CSS animations`` (that was a lot of work :joy:).
-- All data was pull and converted from a json file.
-
-
-## Images
-
-<img src="https://i.imgur.com/aSRtjXd.jpg">
-
-
-<img src="https://i.imgur.com/xlb9eNn.jpg">
-
-
----
-## Author
-
-<h4 align="center"> 
-<a href="https://github.com/yagoramires">
- <img style="border-radius: 100%;" src="https://i.imgur.com/z5JJCms.jpg" width="150px;" alt=""/>
- <br />
- <sub><b>Yago Ramires</b></sub></a> <a href="https://github.com/yagoramires" title="Rocketseat">🚀</a>
-
- <br />
-</h4>
-<h4 align="center"> 
-
-[![Linkedin Badge](https://img.shields.io/badge/-Yago%20Ramires-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/yagoramires/)](https://www.linkedin.com/in/yagoramires/)
-
-</h4>
+<div align="center" >
+    <p>
+        <img style="border-radius: 50%;" src="https://i.imgur.com/mDJjScy.jpg" width="150px;" />
+    </p>
+    <p>
+        <a
+            href="https://www.linkedin.com/in/yagoramires/"
+            target="_blank"
+            >
+            <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"/>
+        </a>
+    </p>
+    <p>
+        <a href="https://github.com/yagoramires" ><b>Yago Ramires</b> 🚀</a>
+    </p>
+</div>
